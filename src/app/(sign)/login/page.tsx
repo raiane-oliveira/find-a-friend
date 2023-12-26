@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 export default function Login() {
   return (
-    <div className="flex justify-between">
+    <div className="flex gap-8 justify-between">
       <div className="bg-primary flex flex-col items-center justify-between max-w-[30.5rem] h-[41rem] w-full py-10 rounded-2.5xl">
         <Image
           src={logo}

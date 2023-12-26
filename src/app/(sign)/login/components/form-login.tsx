@@ -2,6 +2,7 @@
 
 import { api } from '@/lib/axios'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { AxiosError } from 'axios'
 import { EyeOff, Eye } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
@@ -35,13 +36,17 @@ export function FormLogin() {
       console.log(response)
       router.push('/')
     } catch (err) {
+      if (err instanceof AxiosError) {
+        if (err.status === 404) {
+          alert('Não existe um usuário com esse email')
+        }
+      }
+
       alert(
         'Não conseguimos fazer login na aplicação. Cheque suas credenciais ou tente novamente mais tarde.',
       )
     }
   }
-
-  console.log(errors)
 
   return (
     <form
