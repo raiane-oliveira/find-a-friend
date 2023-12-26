@@ -4,7 +4,7 @@ import './globals.css'
 
 const nunito = Nunito({
   subsets: ['latin'],
-  weight: ['600', '400', '800', '700'],
+  weight: ['600', '400', '800', '500', '700'],
 })
 
 export const metadata: Metadata = {

@@ -21,19 +21,19 @@ const config: Config = {
         },
         whatsapp: '#3CDC8C',
       },
-
       spacing: {
         '16.5': '4.5rem',
         '32.5': '8.5rem',
       },
-
       borderRadius: {
         '2.5xl': '1.25rem',
         input: '0.625rem',
       },
-
       fontSize: {
         '5.5xl': '3.375rem',
+      },
+      gridTemplateColumns: {
+        location: 'minmax(20rem, 24.5rem) 1fr',
       },
     },
   },
