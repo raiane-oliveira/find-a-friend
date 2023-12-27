@@ -11,9 +11,15 @@ import { twMerge } from 'tailwind-merge'
 interface CitiesProps extends SelectPrimitive.SelectProps {
   state: string
   className?: string
+  classNameContent?: string
 }
 
-export function Cities({ state, className, ...props }: CitiesProps) {
+export function Cities({
+  state,
+  className,
+  classNameContent,
+  ...props
+}: CitiesProps) {
   const { data: responseCities, isLoading: isLoadingCities } = useQuery({
     queryKey: ['cities', state],
     queryFn: async () => {
@@ -51,7 +57,10 @@ export function Cities({ state, className, ...props }: CitiesProps) {
 
       <Select.Content
         data-select-cities-wrapper
-        className="bg-red-app max-h-48 py-2 text-white rounded-lg overflow-hidden"
+        className={twMerge(
+          'bg-red-app max-h-48 py-2 text-white rounded-lg overflow-hidden',
+          classNameContent,
+        )}
       >
         {cities.map((city) => (
           <Select.Item

@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { twMerge } from 'tailwind-merge'
 
 interface SearchProps {
@@ -8,9 +11,20 @@ interface SearchProps {
 }
 
 export function Search({ state, city, className }: SearchProps) {
+  const searchParams = useSearchParams()
+
+  const currentParams = new URLSearchParams(Array.from(searchParams.entries()))
+
+  currentParams.delete('city')
+  currentParams.delete('state')
+
+  const restParams = currentParams.toString()
+    ? `&${currentParams.toString()}`
+    : ''
+
   return (
     <Link
-      href={!city ? '#' : `/location?city=${city}&state=${state}`}
+      href={!city ? '#' : `/location?city=${city}&state=${state}${restParams}`}
       className={twMerge(
         `bg-action transition-colors w-16.5 h-16.5 grid rounded-2.5xl place-items-center ${
           !city ? 'cursor-not-allowed' : 'hover:bg-action/80'

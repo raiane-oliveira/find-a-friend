@@ -24,6 +24,8 @@ const config: Config = {
       spacing: {
         '16.5': '4.5rem',
         '32.5': '8.5rem',
+        '34': '8.5rem',
+        '38': '9.5rem',
       },
       borderRadius: {
         '2.5xl': '1.25rem',
@@ -34,6 +36,7 @@ const config: Config = {
       },
       gridTemplateColumns: {
         location: 'minmax(20rem, 24.5rem) 1fr',
+        pets: 'repeat(auto-fit, minmax(14.5rem, 17.5rem))',
       },
     },
   },

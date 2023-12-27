@@ -1,5 +1,6 @@
 'use client'
 
+import { Input } from '@/components/form/input'
 import { api } from '@/lib/axios'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { AxiosError } from 'axios'
@@ -29,11 +30,10 @@ export function FormLogin() {
 
   async function handleLogin(data: LoginFormData) {
     try {
-      const response = await api.post('/sessions', {
-        data,
+      await api.post('/sessions', {
+        ...data,
       })
 
-      console.log(response)
       router.push('/')
     } catch (err) {
       if (err instanceof AxiosError) {
@@ -56,14 +56,10 @@ export function FormLogin() {
     >
       <label className="space-y-2">
         <div className="font-semibold">Email</div>
-        <input
+        <Input
           type="email"
           placeholder="nome@email.com"
-          className={`text-lg ${
-            errors.email
-              ? 'border-red-app'
-              : 'border-slate-350 focus-visible:ring-2 ring-secondary-400'
-          } outline-none font-semibold rounded-input p-4 placeholder:text-secondary-500/75 border bg-slate-25 w-full`}
+          className={`${errors.email && 'border-red-app focus-visible:ring-0'}`}
           {...register('email')}
         />
 

@@ -15,9 +15,10 @@ interface State {
 
 interface StatesProps extends SelectPrimitive.SelectProps {
   className?: string
+  classNameContent?: string
 }
 
-export function States({ className, ...props }: StatesProps) {
+export function States({ className, classNameContent, ...props }: StatesProps) {
   const { data: responseState } = useQuery({
     queryKey: ['states'],
     queryFn: async () => {
@@ -51,8 +52,10 @@ export function States({ className, ...props }: StatesProps) {
       </Select.Trigger>
 
       <Select.Content
-        data-select-states-wrapper
-        className="bg-red-app max-h-48 py-2 text-white rounded-lg overflow-hidden"
+        className={twMerge(
+          'bg-red-app max-h-48 py-2 text-white rounded-lg overflow-hidden',
+          classNameContent,
+        )}
       >
         {states.map((state) => (
           <Select.Item
