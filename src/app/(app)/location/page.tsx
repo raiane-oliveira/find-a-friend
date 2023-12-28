@@ -40,7 +40,7 @@ export default async function Location({ searchParams }: PageProps) {
           </h2>
         </header>
 
-        <div className="grid grid-cols-pets gap-8 [&>a:nth-child(odd)_div[data-logo]]:bg-primary">
+        <div className="grid grid-cols-petsLocation gap-8 [&>a:nth-child(odd)_div[data-logo]]:bg-primary">
           {pets.map((pet) => (
             <Link
               key={pet.id}

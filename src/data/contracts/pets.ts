@@ -30,6 +30,7 @@ export interface Pet {
   name: string
   about: string
   age: number
+  size: Sizes
   city: string
   state: string
   energy: number

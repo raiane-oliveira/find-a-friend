@@ -36,7 +36,11 @@ const config: Config = {
       },
       gridTemplateColumns: {
         location: 'minmax(20rem, 24.5rem) 1fr',
-        pets: 'repeat(auto-fit, minmax(14.5rem, 17.5rem))',
+        petsLocation: 'repeat(auto-fit, minmax(14.5rem, 17.5rem))',
+      },
+      backgroundImage: {
+        'adoption-requirement':
+          'linear-gradient(130deg, rgba(247, 95, 96, 0.10) 16.45%, rgba(241, 81, 86, 0.00) 97.3%)',
       },
     },
   },
