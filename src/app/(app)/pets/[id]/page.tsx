@@ -88,7 +88,7 @@ export default async function PetProfilePage({ params }: PageProps) {
                   }
                 </span>
               </div>
-              <div className="max-w-[10.625rem] w-full rounded-2.5xl border-2 border-secondary-500/10 p-6 flex flex-col gap-4">
+              <div className="flex-1 rounded-2.5xl border-2 border-secondary-500/10 p-6 flex flex-col gap-4">
                 <div className="flex gap-1 pt-2">
                   {sizes.map((size) => (
                     <div

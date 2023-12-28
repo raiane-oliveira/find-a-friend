@@ -31,7 +31,8 @@ export default async function Location({ searchParams }: PageProps) {
 
         <FiltersPet />
       </aside>
-      <main className="py-38 pr-24 max-w-screen-2xl">
+
+      <main className="py-38 pr-24 max-w-screen-2xl max-h-screen overflow-y-auto">
         <header className="flex mb-12 justify-between items-center">
           <h2 className="text-secondary-500 text-xl/8">
             Encontre{' '}
