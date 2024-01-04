@@ -37,9 +37,32 @@ export function FiltersPet() {
     handler(value)
   }
 
+  function handleResetFilters() {
+    setAge('')
+    setEnergy('')
+    setSize('')
+    setIndependence('')
+
+    const city = searchParams.get('city')
+    const state = searchParams.get('state')
+
+    router.push(`${pathname}?city=${city}&state=${state}`)
+  }
+
   return (
     <section className="pt-8 pl-14 pr-10 pb-12 flex flex-col gap-7">
-      <span className="text-xl/9 font-extrabold">Filtros</span>
+      <div className="flex justify-between gap-4 items-center">
+        <span className="text-xl/9 font-extrabold">Filtros</span>
+        {(age || energy || size || independence) && (
+          <button
+            type="button"
+            className="text-xs font-medium hover:opacity-80"
+            onClick={handleResetFilters}
+          >
+            Resetar filtros
+          </button>
+        )}
+      </div>
 
       <label className="space-y-3">
         <span className="text-xs font-medium block">Idade</span>
