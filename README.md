@@ -9,7 +9,7 @@
 <!-- BADGES -->
 <p align="center">
   <img src="https://badgen.net/npm/v/next/" />
-  <img src="https://badgen.net/github/contributors/raiane-oliveira/ignite-call" />
+  <img src="https://badgen.net/github/contributors/raiane-oliveira/find-a-friend" />
 </p>
 
 <h4 align="center"> 
