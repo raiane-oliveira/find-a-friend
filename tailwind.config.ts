@@ -32,6 +32,7 @@ const config: Config = {
         input: '0.625rem',
       },
       fontSize: {
+        '4.5xl': '2.5rem',
         '5.5xl': '3.375rem',
       },
       gridTemplateColumns: {

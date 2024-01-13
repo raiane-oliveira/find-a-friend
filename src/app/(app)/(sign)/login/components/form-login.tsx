@@ -30,9 +30,13 @@ export function FormLogin() {
 
   async function handleLogin(data: LoginFormData) {
     try {
-      await api.post('/sessions', {
+      const {
+        data: { orgId },
+      } = await api.post('/sessions', {
         ...data,
       })
+
+      localStorage.setItem('@findAfriend-v1:orgId', orgId)
 
       router.push('/')
     } catch (err) {
