@@ -29,7 +29,7 @@
 A front-end project to consume the FindAFriend RESTful API made by me in this <a href="https://github.com/raiane-oliveira/find-a-friend-API">repository</a>.
 
 <!-- FOTO DA APLICAÇÃO -->
-<img src="" />
+<img src="https://github.com/raiane-oliveira/find-a-friend/assets/100815627/f959f676-0ec5-46a5-8711-5696c85e725c" />
 
 This challenge was offered in Rocketseat's Ignite course.
 
